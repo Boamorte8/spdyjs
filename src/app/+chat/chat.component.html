@@ -1,0 +1,16 @@
+<p>
+  chat works!
+</p>
+
+<form  (ngSubmit)="add(newmsg.value)" #chatForm="ngForm">
+
+<input type="text" #newmsg />
+<button type="submit">send</button>
+
+</form>
+
+<ul *ngIf="messages">
+  <li *ngFor="let item of messages | async">
+    {{ item.email }}: {{ item.text }}
+  </li>
+</ul>
