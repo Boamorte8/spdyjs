@@ -10,9 +10,7 @@ import { AngularFire, AuthProviders, AuthMethods } from 'angularfire2';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(public af: AngularFire) {
-    this.af.auth.subscribe(auth => console.log(auth));
-  }
+  constructor(public af: AngularFire) {}
 
   login() {
     this.af.auth.login();
